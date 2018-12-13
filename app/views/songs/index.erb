@@ -1,0 +1,13 @@
+require 'pry'
+<h1>Songs</h1>
+
+<ul>
+  <% @songs.each do |song| %>
+    <li>
+      binding.pry
+      <a href="/songs/<%=song.id %>">
+         <%= song.name %>
+       </a>
+    </li>
+  <% end %>
+</ul>
