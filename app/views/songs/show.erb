@@ -1,0 +1,17 @@
+<h1>Show Song</h1>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title><%=@song.name%></title>
+  </head>
+  <body>
+    <h2>Artist</h2>
+    <ul>
+      <li><a href="/artists/<%= @song.artist.slug %>"><%= @song.artist.name %></a> -
+      <% @song.genres.each do |genre|%>
+      <a href="/genres/<%= genre.slug %>"><%= genre.name %> </a></li>
+      <%end%>
+    </ul>
+  </body>
+</html>
