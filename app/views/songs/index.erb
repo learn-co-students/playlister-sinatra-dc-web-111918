@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Songs</title>
+  </head>
+  <h1>Songs</h1>
+  <body>
+    <%@songs.each do |poop|%>
+      <li><a href="/songs/<%= poop.slug %>"><%=poop.name%></a></li>
+    <%end%>
+  </body>
+</html>
